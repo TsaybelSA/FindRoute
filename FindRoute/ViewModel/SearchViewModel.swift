@@ -17,9 +17,10 @@ struct Location: Identifiable {
 }
 
 class SearchData: ObservableObject {
-	
+	//list of fouded locations in accordance to search request
 	@Published private(set) var searchList = [Location]()
 	
+	//list including chosen locations
 	@Published private(set) var setLocations = [MKPointAnnotation]() {
 		didSet {
 			print("Location was added")
